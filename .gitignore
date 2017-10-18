@@ -3,4 +3,6 @@ npm-debug.log
 yarn.lock
 discover-movies/node_modules
 discover-movies/yarn.lock
+weather/node_modules
+weather/yarn.lock
 
