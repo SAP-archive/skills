@@ -48,7 +48,7 @@ app.post('/weather', function(req, res) {
         replies: [
           {
             type: 'text',
-            content: `We're expecting ${mainWeather.toLowerCase()} in ${location.formatted} today, with a ${tempToAdjective(
+            content: `We're expecting ${mainWeather.toLowerCase()} in ${location.formatted} today, with ${tempToAdjective(
               temperature
             )} ${temperature}°C ${weatherToEmoji(mainWeather)}`,
           },
@@ -73,13 +73,15 @@ function kelvinToCelcius(temp) {
 // Returns an adjective depending on today's temperature
 function tempToAdjective(temp) {
   if (temp < 10) {
-    return 'refreshing';
+    return 'an invigorating';
   } else if (temp < 20) {
-    return 'lukewarm';
+    return 'a refreshing';
   } else if (temp < 30) {
-    return 'warm';
+    return 'a warm';
+  } else if (temp < 40) {
+    return 'a hot';
   } else {
-    return 'hot';
+    return 'a boiling';
   }
 }
 
