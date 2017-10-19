@@ -1,5 +1,5 @@
 const axios = require('axios');
-const config = require('./config');
+const config = require('../config');
 
 function discoverMovie(kind, genreId, language) {
   return moviedbApiCall(kind, genreId, language).then(response =>
