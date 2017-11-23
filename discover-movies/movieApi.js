@@ -8,7 +8,7 @@ function discoverMovie(kind, genreId, language) {
 }
 
 function moviedbApiCall(kind, genreId, language) {
-  return axios.get(`https://api.themoviedb.org/3/discover/movie`, {
+  return axios.get(`https://api.themoviedb.org/3/discover/${kind}`, {
     params: {
       api_key: config.MOVIEDB_TOKEN,
       sort_by: 'popularity.desc',

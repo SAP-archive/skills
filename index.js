@@ -11,6 +11,11 @@ app.use(bodyParser.json());
 loadMovieRoute(app);
 loadWeatherRoute(app);
 
+app.post('/errors', function(req, res) {
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
 const port = config.PORT;
 app.listen(port, function() {
   console.log(`App is listening on port ${port}`);
