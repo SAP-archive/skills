@@ -16,9 +16,13 @@ function loadMovieRoute(app) {
     const language = req.body.conversation.memory['language'];
     const nationality = req.body.conversation.memory['nationality'];
 
-    const isoCode = language
-      ? language.short.toLowerCase()
-      : nationality.short.toLowerCase();
+    var isoCode = 'en'
+
+    if (language || nationality) {
+      isoCode = language
+        ? language.short.toLowerCase()
+        : nationality.short.toLowerCase();
+    }
 
     return discoverMovie(kind, genreId, isoCode)
       .then(function(carouselle) {
