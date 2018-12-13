@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A backend for your weather bot on Recast.ai",
   "main": "index.js",
-  "author": "nathan.grasset@recast.ai",
+  "author": "SAP CAI team",
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
