@@ -1,7 +1,7 @@
 {
   "name": "movie_bot",
   "version": "1.0.0",
-  "description": "A backend for your weather bot on Recast.ai",
+  "description": "A backend for your weather bot on SAP Conversational AI",
   "main": "index.js",
   "author": "SAP CAI team",
   "license": "MIT",
